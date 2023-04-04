@@ -45,7 +45,12 @@
   <script type="systemjs-importmap">
     {
       "imports": {
-        "@hrcls2/root-config": "//localhost:9000/hrcls2-root-config.js"
+        "@hrcls2/root-config": "//localhost:9000/hrcls2-root-config.js",
+        "@hrcls2/single-spa-demo-cls-react-navbar": "//localhost:9001/hrcls2-single-spa-demo-cls-react-navbar.js",
+        "@hrcls2/single-spa-demo-cls-react-cls-page": "//localhost:9002/hrcls2-single-spa-demo-cls-react-cls-page.js",
+        "@hrcls2/single-spa-demo-cls-vue-cls-page1": "//localhost:8080/js/app.js",
+        "react" : "https://cdn.jsdelivr.net/npm/react@17.0.1/umd/react.production.min.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@17.0.1/umd/react-dom.production.min.js"
       }
     }
   </script>
@@ -67,13 +72,15 @@
   <% } %>
 </head>
 <body>
-  <noscript>
-    You need to enable JavaScript to run this app.
-  </noscript>
-  <main></main>
   <script>
     System.import('@hrcls2/root-config');
   </script>
   <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
+  <div id="nav-container-cls"></div>
+<main>
+  <div id="cls-page-1"></div>
+  <div id="dms-page-2"></div>
+</main>
+
 </body>
 </html>
